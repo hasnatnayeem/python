@@ -14,7 +14,7 @@ for file_name in files:
         with open(file_name, 'r') as file :
             content = file.read()
 
-        content = content.replace(, )
+        content = content.replace(text_to_replace, replace_with)
 
         with open(file_name, 'w') as file:
             file.write(filedata)
