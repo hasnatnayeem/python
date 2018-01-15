@@ -12,15 +12,17 @@ def is_binay_file(filepathname):
        return False
 
 
+to_find = "_checkKey"
+
 counter = 0
-for root, dirs, files in os.walk("/home/shakil/Desktop/italc-3.0.3"):
+for root, dirs, files in os.walk("/var/www/html/bookmarker"):
     for f in files:
         file_name = root + '/' + f
         with open(file_name, 'r') as file :
             if not is_binay_file(file_name):         
                 try:
                     content = file.read()
-                    if content.find("2004-2016") != -1:
+                    if content.find(to_find) != -1:
                         counter += 1
                         print (file_name + '\n\n')
                 except UnicodeDecodeError:
