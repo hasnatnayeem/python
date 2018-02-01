@@ -15,8 +15,7 @@ if len(files) > 0:
         if file_name.endswith(".txt"):
             print("Adding " + file_name)
             file_path = os.path.join(path,file_name)
-            basename = file_name
-            z.write(file_path, file_name)
+            z.write(file_path, file_name) # Only adding the file instead of full directory
             os.remove(file_path)
 
     z.close()
