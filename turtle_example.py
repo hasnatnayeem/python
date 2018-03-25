@@ -36,7 +36,24 @@ def drawMultipleSquare():
             turtle.left(90)
     turtle.exitonclick()
 
+def drawWheel():
+    turtle.speed(0)
+    for k in range(36):
+        for i in range(4):
+            turtle.forward(100)
+            turtle.right(90)
+        turtle.right(10)
+    turtle.exitonclick()
+
 #drawSquare()
 #drawTriangle()
 #drawDashedLine()
-drawMultipleSquare()
+#drawMultipleSquare()
+drawWheel()
+
+
+
+
+
+
+
