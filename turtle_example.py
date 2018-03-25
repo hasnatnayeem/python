@@ -92,7 +92,16 @@ def drawRandomLines():
         turtle.dot()
     turtle.exitonclick()
         
-
+def drawRandomColoredPoints():
+    colors = ["red", "green", "blue", "yellow", "orange","black", "purple"]
+    turtle.penup()
+    for i in range(50):
+        x = random.randint(-200, 200)
+        y = random.randint(-200, 200)
+        turtle.setposition(x, y)
+        i = random.randint(0, len(colors) - 1)
+        turtle.dot(colors[i])
+    turtle.exitonclick()
 #drawSquare()
 #drawTriangle()
 #drawDashedLine()
@@ -101,7 +110,7 @@ def drawRandomLines():
 #drawDots()
 #drawCircle()
 
-drawRandomLines()
+drawRandomColoredPoints()
 
 
 
