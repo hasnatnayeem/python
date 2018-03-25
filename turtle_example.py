@@ -11,9 +11,6 @@ def drawSquare():
     turtle.exitonclick()
 
 def drawTriangle():
-    turtle.speed(1)
-    turtle.shape("turtle")
-
     turtle.left(60)
     turtle.forward(100)
     
@@ -23,5 +20,14 @@ def drawTriangle():
     turtle.forward(100)
     turtle.exitonclick()
 
-drawSquare()
+def drawDashedLine():
+    for i in range(10):
+        turtle.forward(20)
+        turtle.penup()
+        turtle.forward(5)
+        turtle.pendown()
+    turtle.exitonclick()
+
+#drawSquare()
 #drawTriangle()
+drawDashedLine()
