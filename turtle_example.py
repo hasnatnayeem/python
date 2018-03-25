@@ -45,12 +45,29 @@ def drawWheel():
         turtle.right(10)
     turtle.exitonclick()
 
+
+def drawDots():
+    height = 5
+    width = 5
+    step = 20
+    turtle.penup()
+
+    for i in range(height):
+        for k in range(width):
+            turtle.dot()
+            turtle.forward(step)
+        turtle.backward(width * step)
+        turtle.right(90)
+        turtle.forward(step)
+        turtle.left(90)
+    turtle.exitonclick()
+
 #drawSquare()
 #drawTriangle()
 #drawDashedLine()
 #drawMultipleSquare()
-drawWheel()
-
+#drawWheel()
+drawDots()
 
 
 
