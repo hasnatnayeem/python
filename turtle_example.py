@@ -74,9 +74,18 @@ def drawCircle():
         turtle.right(4)
     turtle.exitonclick()
 
+
 def drawRandomPoints():
     turtle.penup()
     for i in range(20):
+        x = random.randint(-200, 200)
+        y = random.randint(-200, 200)
+        turtle.setposition(x, y)
+        turtle.dot()
+    turtle.exitonclick()
+
+def drawRandomLines():
+    for i in range(30):
         x = random.randint(-200, 200)
         y = random.randint(-200, 200)
         turtle.setposition(x, y)
@@ -92,7 +101,7 @@ def drawRandomPoints():
 #drawDots()
 #drawCircle()
 
-drawRandomPoints()
+drawRandomLines()
 
 
 
