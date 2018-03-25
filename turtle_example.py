@@ -12,4 +12,18 @@ def drawSquare():
     turtle.forward(100)
     turtle.exitonclick()
 
-drawSquare()
+def drawTriangle():
+    turtle.speed(1)
+    turtle.shape("turtle")
+
+    turtle.left(60)
+    turtle.forward(100)
+    
+    turtle.right(120)
+    turtle.forward(100)
+    turtle.right(120)
+    turtle.forward(100)
+    turtle.exitonclick()
+
+#drawSquare()
+drawTriangle()
