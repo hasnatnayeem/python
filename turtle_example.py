@@ -3,6 +3,7 @@ import turtle
 
 turtle.speed(1)
 turtle.shape("turtle")
+turtle.color("Green")
 
 def drawSquare():
     for i in range(4):
