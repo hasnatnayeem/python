@@ -1,7 +1,7 @@
 import turtle
 
 
-turtle.speed(1)
+turtle.speed(0)
 turtle.shape("turtle")
 turtle.color("Green")
 
@@ -62,13 +62,24 @@ def drawDots():
         turtle.left(90)
     turtle.exitonclick()
 
+def drawSquare(side_length):
+    for i in range(4):
+        turtle.forward(side_length)
+        turtle.left(90)
+
+def drawCircle():
+    for i in range(90):
+        drawSquare(90)
+        turtle.right(4)
+    turtle.exitonclick()
+
 #drawSquare()
 #drawTriangle()
 #drawDashedLine()
 #drawMultipleSquare()
 #drawWheel()
-drawDots()
-
+#drawDots()
+drawCircle()
 
 
 
