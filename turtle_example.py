@@ -1,15 +1,13 @@
 import turtle
 
+
+turtle.speed(1)
+turtle.shape("turtle")
+
 def drawSquare():
-    turtle.speed(1)
-    turtle.shape("turtle")
-    turtle.forward(100)
-    turtle.left(90)
-    turtle.forward(100)
-    turtle.left(90)
-    turtle.forward(100)
-    turtle.left(90)
-    turtle.forward(100)
+    for i in range(4):
+        turtle.forward(100)
+        turtle.left(90)
     turtle.exitonclick()
 
 def drawTriangle():
@@ -25,5 +23,5 @@ def drawTriangle():
     turtle.forward(100)
     turtle.exitonclick()
 
-#drawSquare()
-drawTriangle()
+drawSquare()
+#drawTriangle()
