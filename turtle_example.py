@@ -102,6 +102,19 @@ def drawRandomColoredPoints():
         i = random.randint(0, len(colors) - 1)
         turtle.dot(colors[i])
     turtle.exitonclick()
+
+
+def drawSunflower():
+    turtle.color('red', 'yellow')
+    turtle.begin_fill()
+
+    while True:
+        turtle.forward(250)
+        turtle.left(170)
+        if (abs(turtle.position())) < 1:
+            break
+    turtle.end_fill()
+    turtle.done()
 #drawSquare()
 #drawTriangle()
 #drawDashedLine()
@@ -109,8 +122,8 @@ def drawRandomColoredPoints():
 #drawWheel()
 #drawDots()
 #drawCircle()
+#drawRandomColoredPoints()
 
-drawRandomColoredPoints()
-
+drawSunflower()
 
 
