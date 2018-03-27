@@ -111,7 +111,7 @@ def drawSunflower():
     while True:
         turtle.forward(250)
         turtle.left(170)
-        if (abs(turtle.position())) < 1:
+        if abs(turtle.position()) < 1:
             break
     turtle.end_fill()
     turtle.done()
