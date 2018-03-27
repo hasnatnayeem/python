@@ -115,6 +115,53 @@ def drawSunflower():
             break
     turtle.end_fill()
     turtle.done()
+
+def fibonacci_series(n):
+    series = []
+    fib_x = 0
+    fib_next = 1
+    i = 1
+
+    if n < 0:
+        return "Invalid number"
+    if n == 1:
+        series.append(1)
+        return series
+    while i <= n:
+        fib_x, fib_next = fib_next, fib_x + fib_next
+        series.append(fib_x)
+        i += 1
+    return series
+
+def drawCircle():
+    for i in fibonacci_series(7):
+        r = i * 20
+        a = -90
+        turtle.circle(r, a)
+        
+        turtle.forward(r)
+        turtle.left(90)
+
+        turtle.forward(r//2)
+        turtle.left(90)
+        turtle.penup()
+        turtle.forward(r/2)
+        turtle.write(i)
+        turtle.left(180)
+        turtle.forward(r/2)
+        turtle.left(90)
+        turtle.pendown()
+        turtle.forward(r//2)
+
+        turtle.left(90)
+        turtle.forward(r)
+        turtle.left(90)
+        turtle.forward(r)
+        turtle.left(90)
+
+    turtle.done()
+
+
 #drawSquare()
 #drawTriangle()
 #drawDashedLine()
@@ -123,7 +170,6 @@ def drawSunflower():
 #drawDots()
 #drawCircle()
 #drawRandomColoredPoints()
-
-drawSunflower()
-
+#drawSunflower()
+drawCircle()
 
