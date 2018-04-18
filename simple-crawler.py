@@ -1,5 +1,5 @@
-# Simple crawler which is a part of the course "Intro to Computer Science - Udacity"
-
+# Simple crawler is a part of the course "Intro to Computer Science - Udacity"
+# https://classroom.udacity.com/courses/cs101
 
 
 def get_page(url):
@@ -100,6 +100,28 @@ def get_all_links(page):
             break
     return links
 
+
+def add_to_index(index, keyword, url):
+    for entry in index:
+        if entry[0] == keyword:
+            entry[1].append(url)
+            return
+    index.append([keyword, [url]])
+
+def lookup(index, keyword):
+    for entry in index:
+        if entry[0] == keyword:
+            return entry[1]
+    return []
+
+def add_page_to_index(index, url, content):
+    words = content.split()
+    for word in words:
+        add_to_index(index, word, url)
+
+
+
+
 def crawl_web(seed):
     tocrawl = [seed]
     crawled = []
@@ -114,15 +136,18 @@ def crawl_web(seed, max_depth):
     tocrawl = [seed]
     crawled = []
     next_depth = []
+    index = []
     depth = 0
     while tocrawl and depth <= max_depth:
         page = tocrawl.pop()
         if page not in crawled:
-            union(next_depth, get_all_links(get_page(page)))
+            content = get_page(page)
+            add_page_to_index(index, page, content)
+            union(next_depth, get_all_links(content))
             crawled.append(page)
         if not tocrawl:
             tocrawl, next_depth = next_depth, []
             depth = depth + 1
-    return crawled
+    return index
 
 print(crawl_web("http://top.contributors/forbiddenvoid.html",2))
