@@ -10,6 +10,7 @@ n4 = Node('Node 4')
 n5 = Node('Node 5')
 n6 = Node('Node 6')
 
+# Linking
 n1.next = n2
 n2.next = n3
 n3.next = n4
@@ -19,7 +20,7 @@ n5.next = n6
 head = n1
 
 
-// Traversing
+# Traversing
 while head:
     print(head.value)
     head = head.next
