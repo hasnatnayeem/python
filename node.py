@@ -19,9 +19,7 @@ n5.next = n6
 
 head = n1
 
-
 # Traversing
 while head:
     print(head.value)
     head = head.next
-
