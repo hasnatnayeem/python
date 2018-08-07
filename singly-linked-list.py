@@ -13,6 +13,11 @@ class LinkedList:
             print(current.value)
             current = current.next
 
+    def insertAtBeginning(self, data):
+        newNode = Node(data)
+        newNode.next = self.head
+        self.head = newNode
+
     
 list = LinkedList()
 n1 = Node('Node 1')
@@ -24,5 +29,8 @@ list.head = n1
 n1.next = n2
 n2.next = n3
 n3.next = n4
+
+# Insert data at the beginning of the list
+list.insertAtBeginning("Beginning")
 
 list.print()
