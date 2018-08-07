@@ -18,6 +18,17 @@ class LinkedList:
         newNode.next = self.head
         self.head = newNode
 
+    def insertAtEnding(self, data):
+        newNode = Node(data)
+        if self.head is None:
+            self.head = newNode
+            return
+        
+        last = self.head
+        while last.next:
+            last = last.next
+        last.next = newNode
+
     
 list = LinkedList()
 n1 = Node('Node 1')
@@ -32,5 +43,8 @@ n3.next = n4
 
 # Insert data at the beginning of the list
 list.insertAtBeginning("Beginning")
+
+# Insert data at the end of the list
+list.insertAtEnding("Ending")
 
 list.print()
