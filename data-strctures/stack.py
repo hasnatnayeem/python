@@ -5,8 +5,8 @@ class Stack:
     def isEmpty(self):
         return self.items == []
 
-    def push(self, value):
-        self.items.append(value)
+    def push(self, item):
+        self.items.append(item)
 
     def pop(self):
         return self.items.pop()
